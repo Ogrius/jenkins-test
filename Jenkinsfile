@@ -1,18 +1,14 @@
 pipeline {
   agent none
   stages {
-    stage('Generate list') {
+    stage('Run External Syncs') {
       agent any
       steps {
         sh 'ls'
 	sh './testscript.sh'
 	sh 'cat tmp.sync-repos'
+	script 'tmp.sync-repos'
       }
-    }
-    stage('Run Syncs') {
-    	steps {
-    		script: tmp.sync-repos
-	}
     }
   }
 }

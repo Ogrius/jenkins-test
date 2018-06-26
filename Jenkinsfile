@@ -1,9 +1,11 @@
 pipeline {
-  agent any
+  agent none
   stages {
-    stage('Master') {
+    stage('Generate list') {
+      agent any
       steps {
         sh 'ls'
+	sh './testscript.sh'
       }
     }
   }

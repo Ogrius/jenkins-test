@@ -7,6 +7,14 @@ pipeline {
         sh 'ls'
 	sh './testscript.sh'
       }
+      environment {
+      	OSLIST=`./testscript.sh`
+      }
+      
+      steps {
+      	echo "OSLIST = [$OSLIST]"
+      }
+
     }
   }
 }

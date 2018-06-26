@@ -9,5 +9,8 @@ pipeline {
 	sh 'cat tmp.sync-repos'
       }
     }
+    stage('Run Syncs') {
+    	script: tmp.sync-repos
+    }
   }
 }

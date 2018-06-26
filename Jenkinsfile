@@ -12,7 +12,7 @@ pipeline {
       }
       
       steps {
-      	echo "OSLIST = [$OSLIST]"
+      	sh 'echo "OSLIST = [$OSLIST]"'
       }
 
     }

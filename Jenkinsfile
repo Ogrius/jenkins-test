@@ -10,7 +10,9 @@ pipeline {
       }
     }
     stage('Run Syncs') {
-    	script: tmp.sync-repos
+    	steps {
+    		script: tmp.sync-repos
+	}
     }
   }
 }

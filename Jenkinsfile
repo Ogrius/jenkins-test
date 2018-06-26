@@ -7,7 +7,7 @@ pipeline {
         sh 'ls'
 	sh './testscript.sh'
 	sh 'cat tmp.sync-repos'
-	script 'tmp.sync-repos'
+	script tmp.sync-repos
       }
     }
   }

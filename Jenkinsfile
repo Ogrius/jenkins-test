@@ -6,6 +6,7 @@ pipeline {
       steps {
         sh 'ls'
 	sh './testscript.sh'
+	sh 'cat tmp.jenkins'
       }
     }
   }
